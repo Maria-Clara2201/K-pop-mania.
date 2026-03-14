@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>K-POP MANIA</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>K-POP MANIA</h1>
+
+<nav>
+<button onclick="mostrarSecao('inicio')">Início</button>
+<button onclick="mostrarSecao('favoritos')">Favoritos</button>
+<button onclick="mostrarSecao('playlists')">Playlists</button>
+</nav>
+
+</header>
+
+
+<!-- INICIO -->
+
+<section id="inicio" class="secao ativa">
+<div id="musicGrid" class="grid"></div>
+</section>
+
+
+<!-- FAVORITOS -->
+
+<section id="favoritos" class="secao">
+<h2>❤️ Favoritos</h2>
+<div id="favGrid" class="grid"></div>
+</section>
+
+
+<!-- PLAYLISTS -->
+
+<section id="playlists" class="secao">
+
+<h2>📀 Playlists</h2>
+
+<div class="playlist-controls">
+<input id="playlistNome" placeholder="Nome da playlist">
+<button onclick="criarPlaylist()">Criar</button>
+</div>
+
+<div id="listaPlaylists"></div>
+
+</section>
+
+
+<!-- PLAYER -->
+
+<footer class="player">
+
+<img id="capa" src="img/capa-blackpink.jpg">
+
+<div class="info">
+<h3 id="title">Escolha uma música</h3>
+<p id="artist"></p>
+</div>
+
+<div class="controls">
+
+<button onclick="anterior()">⏮</button>
+<button onclick="playPause()">▶</button>
+<button onclick="proxima()">⏭</button>
+<button onclick="favoritar()">❤️</button>
+
+</div>
+
+<input type="range" id="progress" value="0">
+
+<audio id="audio"></audio>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
